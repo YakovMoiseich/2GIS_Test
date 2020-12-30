@@ -185,16 +185,9 @@ std::string FileProcessor::process_file(std::string& file_path, std::vector<Proc
 
 	int word_num = 0;
 	std::string word;
-	// wchar_t word;
 	while (file >> word)
 	{
-		++word_num;
-
-		if (word_num == 807)
-		{
-			int k = 0;
-		}
-		
+		++word_num;		
 		checksum += count_CRC(word.c_str(), table);
 		split_and_count(word, words_to_count, found_words);
 	}
