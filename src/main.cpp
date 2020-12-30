@@ -20,8 +20,8 @@ int main(int argc, char* argv[])
 	if (!parse_result)
 	{
 		std::cout << args_parser->get_help();
-		cout << "Enter to exit the program: ";
-		cin.ignore().get();
+		std::cout << "Enter to exit the program\n";
+		std::cin.ignore().get();
 		return 0;
 	}
 
@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
 		std::cout << process_report;
 	}
 	
-	cout << "Enter to exit the program: ";
-	cin.ignore().get();
+	std::cout << "Enter to exit the program\n";
+	std::cin.ignore().get();
 	return 0;
 }
