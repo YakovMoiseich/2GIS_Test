@@ -129,9 +129,9 @@ ArgumentsParser::ArgumentsParser()
 	parsed_options_ = cxxopts::Options("Test program", "C++ console app for words count and checksum calculation! Have a nice day!");
 	parsed_options_.add_options()
 		("f,file", "Input file to process", cxxopts::value<std::vector<std::string>>())
-		("m,method", "Operation while process (\"words\" - count words, \"checksum\" - calculate uint32 checksum of all words (CRC))", 
+		("m,method", "Operation while process (\"words\" - count words, \"checksum\" - calculate uint32 checksum of all words (CRC)), can be combined", 
 			cxxopts::value<std::vector<std::string>>())
-		("v,value", "Word to count", cxxopts::value<std::vector<std::string>>())
+		("v,value", "Word to count, acceptable multi -v params", cxxopts::value<std::vector<std::string>>())
 		("h,help", "Print usage");
 }
 
